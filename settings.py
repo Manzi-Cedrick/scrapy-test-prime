@@ -6,3 +6,4 @@ DOWNLOAD_HANDLERS = {
 }
 
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+DOWNLOADER_CLIENTCONTEXTFACTORY = 'listcontacts.contextfactory.LegacyConnectContextFactory'
