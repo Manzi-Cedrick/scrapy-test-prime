@@ -12,12 +12,14 @@ BOT_NAME = 'listcontracts'
 SPIDER_MODULES = ['listcontracts.spiders']
 NEWSPIDER_MODULE = 'listcontracts.spiders'
 
-
+ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
+FILES_STORE = '/listcontracts/to/save/downloads'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'listcontracts (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+handle_httpstatus_list = [302]
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -86,6 +88,7 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+REDIRECT_ENABLED = False
 
 # Set settings whose default value is deprecated to a future-proof value
 REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
