@@ -8,4 +8,3 @@ DOWNLOAD_HANDLERS = {
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 DOWNLOADER_CLIENTCONTEXTFACTORY = 'listcontacts.contextfactory.LegacyConnectContextFactory'
 REDIRECT_ENABLED = False
-handle_httpstatus_list = [302]
